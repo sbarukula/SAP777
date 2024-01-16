@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ListReport"],function(t){"use strict";var e={actions:{},assertions:{}};return new t({appId:"zrap5873",componentId:"ZRAP100_C_TRAVELTP_587List",contextPath:"/ZRAP100_C_TRAVELTP_587"},e)});
+//# sourceMappingURL=ZRAP100_C_TRAVELTP_587List.js.map

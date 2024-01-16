@@ -1,0 +1,2 @@
+sap.ui.require(["sap/fe/test/JourneyRunner","zrap5873/test/integration/FirstJourney","zrap5873/test/integration/pages/ZRAP100_C_TRAVELTP_587List","zrap5873/test/integration/pages/ZRAP100_C_TRAVELTP_587ObjectPage"],function(e,t,r,n){"use strict";var e=new e({launchUrl:sap.ui.require.toUrl("zrap5873")+"/index.html"});e.run({pages:{onTheZRAP100_C_TRAVELTP_587List:r,onTheZRAP100_C_TRAVELTP_587ObjectPage:n}},t.run)});
+//# sourceMappingURL=opaTests.qunit.js.map

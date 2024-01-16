@@ -1,0 +1,2 @@
+sap.ui.define(["sap/fe/test/ObjectPage"],function(e){"use strict";var t={actions:{},assertions:{}};return new e({appId:"zrap5873",componentId:"ZRAP100_C_TRAVELTP_587ObjectPage",contextPath:"/ZRAP100_C_TRAVELTP_587"},t)});
+//# sourceMappingURL=ZRAP100_C_TRAVELTP_587ObjectPage.js.map

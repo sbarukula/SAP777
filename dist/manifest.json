@@ -1,0 +1,159 @@
+{
+  "_version": "1.57.0",
+  "sap.app": {
+    "id": "zrap5873",
+    "type": "application",
+    "i18n": "i18n/i18n.properties",
+    "applicationVersion": {
+      "version": "0.0.1"
+    },
+    "title": "{{appTitle}}",
+    "description": "{{appDescription}}",
+    "resources": "resources.json",
+    "sourceTemplate": {
+      "id": "@sap/generator-fiori:lrop",
+      "version": "1.12.1",
+      "toolsId": "e74e333e-b81a-4f05-8dca-a1262ac3c9c5"
+    },
+    "dataSources": {
+      "mainService": {
+        "uri": "/sap/opu/odata4/sap/zrap100_ui_travel_o4_587/srvd/sap/zrap100_ui_travel_587/0001/",
+        "type": "OData",
+        "settings": {
+          "annotations": [
+            "annotation"
+          ],
+          "localUri": "localService/metadata.xml",
+          "odataVersion": "4.0"
+        }
+      },
+      "annotation": {
+        "type": "ODataAnnotation",
+        "uri": "annotations/annotation.xml",
+        "settings": {
+          "localUri": "annotations/annotation.xml"
+        }
+      }
+    },
+    "crossNavigation": {
+      "inbounds": {
+        "zrap100_5875-display": {
+          "semanticObject": "zrap100_5875",
+          "action": "display",
+          "title": "{{flpTitle}}",
+          "signature": {
+            "parameters": {},
+            "additionalParameters": "allowed"
+          }
+        }
+      }
+    }
+  },
+  "sap.ui": {
+    "technology": "UI5",
+    "icons": {
+      "icon": "",
+      "favIcon": "",
+      "phone": "",
+      "phone@2": "",
+      "tablet": "",
+      "tablet@2": ""
+    },
+    "deviceTypes": {
+      "desktop": true,
+      "tablet": true,
+      "phone": true
+    }
+  },
+  "sap.ui5": {
+    "flexEnabled": true,
+    "dependencies": {
+      "minUI5Version": "1.117.5",
+      "libs": {
+        "sap.m": {},
+        "sap.ui.core": {},
+        "sap.ushell": {},
+        "sap.fe.templates": {}
+      }
+    },
+    "contentDensities": {
+      "compact": true,
+      "cozy": true
+    },
+    "models": {
+      "i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "settings": {
+          "bundleName": "zrap5873.i18n.i18n"
+        }
+      },
+      "": {
+        "dataSource": "mainService",
+        "preload": true,
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true,
+          "earlyRequests": true
+        }
+      },
+      "@i18n": {
+        "type": "sap.ui.model.resource.ResourceModel",
+        "uri": "i18n/i18n.properties"
+      }
+    },
+    "resources": {
+      "css": []
+    },
+    "routing": {
+      "config": {},
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "ZRAP100_C_TRAVELTP_587List",
+          "target": "ZRAP100_C_TRAVELTP_587List"
+        },
+        {
+          "pattern": "ZRAP100_C_TRAVELTP_587({key}):?query:",
+          "name": "ZRAP100_C_TRAVELTP_587ObjectPage",
+          "target": "ZRAP100_C_TRAVELTP_587ObjectPage"
+        }
+      ],
+      "targets": {
+        "ZRAP100_C_TRAVELTP_587List": {
+          "type": "Component",
+          "id": "ZRAP100_C_TRAVELTP_587List",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "contextPath": "/ZRAP100_C_TRAVELTP_587",
+              "variantManagement": "Page",
+              "navigation": {
+                "ZRAP100_C_TRAVELTP_587": {
+                  "detail": {
+                    "route": "ZRAP100_C_TRAVELTP_587ObjectPage"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ZRAP100_C_TRAVELTP_587ObjectPage": {
+          "type": "Component",
+          "id": "ZRAP100_C_TRAVELTP_587ObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/ZRAP100_C_TRAVELTP_587"
+            }
+          }
+        }
+      }
+    }
+  },
+  "sap.fiori": {
+    "registrationIds": [],
+    "archeType": "transactional"
+  }
+}
